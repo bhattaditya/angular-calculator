@@ -1,0 +1,41 @@
+<div class="main">
+    <div class="calculator">
+      <h3 class="title">CALCULATOR</h3>
+      <div class="display"> 
+        <input type="text" class="result" [value]="calculationString" disabled />
+        <input type="text" class="history" [value]="history" disabled />
+      </div>
+      <div class="buttons-window">
+        <div class="buttons"> 
+          <button id="clear" (click)="clear()">C</button> 
+          <button id="delete_single_num" (click)="deleteNumber()"><i class="fa fa-scissors" aria-hidden="true">D</i></button> 
+          <button (click)="inputOperation('/')">/</button> 
+          <button (click)="inputOperation('*')">*</button> 
+        </div>
+        <div class="buttons"> 
+          <button (click)="inputNumber('7')">7</button> 
+          <button (click)="inputNumber('8')">8</button> 
+          <button (click)="inputNumber('9')">9</button> 
+          <button (click)="inputOperation('-')">-</button> 
+        </div>
+    
+        <div class="buttons"> 
+          <button (click)="inputNumber('4')">4</button> 
+          <button (click)="inputNumber('5')">5</button> 
+          <button (click)="inputNumber('6')">6</button> 
+          <button (click)="inputOperation('+')">+</button> 
+        </div>
+    
+        <div class="buttons"> 
+          <button (click)="inputNumber('1')">1</button> 
+          <button (click)="inputNumber('2')">2</button> 
+          <button (click)="inputNumber('3')">3</button> 
+          <button (click)="inputNumber('.')">.</button> 
+        </div>
+        <div class="buttons"> 
+          <button (click)="inputNumber('0')">0</button> 
+          <button (click)="inputNumber('00')">00</button> 
+          <button id="equalTo" (click)="inputOperation('=')">=</button> 
+        </div>
+    </div>
+  </div>
